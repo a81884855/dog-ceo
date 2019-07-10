@@ -15,7 +15,6 @@ app.get("/api/breed", (req, res) => {
   });
 
 app.get("/api/image/:breed", (req, res)=>{
-  console.log(req.params.breed)
   axios.get(`https://dog.ceo/api/breed/${req.params.breed}/images`)
     .then(function(data){
       image = data.data.message;
