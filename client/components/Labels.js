@@ -9,7 +9,7 @@ export default function Labels(props) {
           <Row>
           {props.result.slice(0,12).map((breed, index)=> 
             <Col className="mt-2" lg={3} md={3} sm={4} xs={6} key={index}>
-              <Button variant="info" value={breed} onClick={props.search}>{breed}</Button>
+              <Button variant="info" value={breed.match("^[^(]+")} onClick={props.search}>{breed}</Button>
             </Col>
           )}
           </Row>

@@ -46,7 +46,8 @@ export class App extends React.Component {
       else if(data[key].length > 0){
         for(let subkey of data[key]){
           if(subkey.includes(e.target.value)){
-            result.push(key)
+            let name = key + "(" + subkey +")"
+            result.push(name)
             break
           }
         }
